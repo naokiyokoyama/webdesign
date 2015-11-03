@@ -5,11 +5,11 @@
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     
-    <link href='http://yandex.st/highlightjs/7.2/styles/ir_black.min.css' rel='stylesheet'/>
-    <script src='http://yandex.st/highlightjs/7.2/highlight.min.js'/>
-    <script>
-      hljs.initHighlightingOnLoad();
-    </script>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="monokai_sublime.css">
+    <script src="highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
 	</head>
 	<body>
@@ -17,7 +17,7 @@
     <div class="navbar navbar-inverse navbar-static-top ">
       <div class="container">
         <div class="navbar-header">
-        <a href="#" class="navbar-brand">Website Title</a>
+        <a href="#" class="navbar-brand">Learn Web Design!</a>
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -40,11 +40,54 @@
     </div>
     <!--Navbar ends-->
 
-		<h1>Hello World</h1>
-		<p>I'm hosted with GitHub Pages.</p>
-	 	
-    <pre><code> <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p> </code></pre>
+		<div class="container">
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10">
+          <div class="panel panel-default">
+            <div class="page-header">
+                <center>
+                  <h2>Part 1: Setup</h2>
+                </center>
+            </div>
+            <div class="panel-body">
+              <h3>Setting Up with GitHub</h3>
+              <p>
+                You can host your site for free via GitHub Pages. First, create a new repository.
+                <center>
+                  <img src="img/github1.png" width="90%">
+                </center>
+                You must name the repo <i>"username.github.io"</i> where <i>username</i> is your username.
+              </p>
+              <h3>The File System</h3>
+              <p>
+                To organize your website, make three folders: css, img, and js. 
+                <ul>
+                  <li>'css' will hold your <strong>stylesheets (CSS)</strong></li>
+                  <li>'img' will hold your <strong>media (pictures, gifs)</strong></li>
+                  <li>'js' will hold your <strong>JavaScript</strong></li>
+                </ul>
+                <center>
+                  <img src="img/files.png" width="90%">
+                </center> 
+                <br>
+                Now, using your text editor, create a new file in the folder containing these three folders. Name the file "index.html". Inside the file, copy paste this code:
+                <div class="codey">
+                  <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;p&gt;I'm hosted with GitHub Pages.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
 
 		<!-- jQuery library -->
 		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
