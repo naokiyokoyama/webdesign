@@ -13,18 +13,5 @@
 
 body {
 	font-size: 17px;
-	background-color: #3090C4;
-}
-
-.navbar {
-	margin-bottom: 0px;
-}
-
-#blurb {
-	margin-left: 20%;
-	margin-right: 20%;
-}
-
-#myweb {
-	color: #B72929;
+	background-color: #3090C4; 
 }
