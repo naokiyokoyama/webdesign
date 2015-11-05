@@ -2,8 +2,12 @@
 <html>
 	<head>
     <title>Learn Web Design!</title>
+    
+    <!--Favicon-->
+    <link rel="icon" type="../image/png" href="../img/favicon.png">
+
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     
     <link rel="stylesheet" href="../css/tutorial.css">
 
@@ -47,7 +51,7 @@
           <div class="panel panel-default">
             <div class="page-header">
                 <center>
-                  <h2>Part 2: Hypertext References</h2>
+                  <h2>Part 2: CSS and Hypertext References</h2>
                 </center>
             </div>
             <div class="panel-body">
@@ -60,11 +64,70 @@
                   <li><strong>color, font-size</strong> and <strong>font-family</strong></li>
                   <li><strong>background-color</strong></li>
                 </ul>
+                Let's revamp that index.html file! Replace the current content with this code block:
+              </p>
+              <div>
+                <pre><code class="html">&lt;!DOCTYPE html&gt;<br/>&lt;html&gt;<br/> &lt;head&gt;<br/>    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;&lt;/style&gt;<br/>  &lt;/head&gt;<br/>  <br/>  &lt;body&gt;<br/>    &lt;h1&gt;Hey World!&lt;/h1&gt;<br/>    &lt;p class=&quot;make-me-huge&quot;&gt;Large text&lt;/p&gt;<br/>    &lt;p class=&quot;make-me-centered&quot;&gt;Centered text&lt;/p&gt;<br/>    &lt;p class=&quot;make-me-huge make-me-centered&quot;&gt;Large centered text&lt;/p&gt;<br/>    &lt;p class=&quot;make-me-red make-me-centered&quot;&gt;Red Centered Text&lt;/p&gt;<br/>    &lt;a href=&quot;#greeting&quot;&gt;Greeting&lt;/a&gt; Jumps to an element in the same HTML file with a specified ID&lt;br&gt;<br/>    &lt;a href=&quot;http://google.com&quot;&gt;Google&lt;/a&gt; Link to an absolute URL&lt;br&gt;<br/>    &lt;a href=&quot;test.html&quot;&gt;Visit my other page!&lt;/a&gt; Link to another HTML file stored locally<br/><br/>    &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;<br/>    &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;<br/>    &lt;p id=&quot;greeting&quot;&gt;Hey there, scroll up!&lt;/p&gt;<br/>    &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;<br/>    &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;<br/>    &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;<br/> &lt;/body&gt;<br/>&lt;/html&gt;</code></pre>
+              </div>
+              <p>
+                Now with your text editor, make a new file called 'styles.css' in your 'css' folder. 
+                <br>
+                In that .css file, add this content:
+              </p>
+              <div class="codey">
+                <pre><code class="css">h1 {
+  color: green;
+}
+
+.make-me-red {
+  color: red;
+}
+
+.make-me-huge {
+  font-size: 40px;
+}
+
+.make-me-centered {
+  text-align: center;
+}
+
+#greeting {
+  text-align: right;
+  color: gray;
+  font-weight: 700;
+  font-size: 40px;
+}
+</code></pre>
+              </div>
+              <p>
+                Lastly, create a file name 'test.html' in your root folder.
+                <br><br>
+                As you can see by opening the 'index.html' in your browser, CSS files style your content, while hrefs link other files and web pages to your HTML page. Classes and IDs are used to specify which content get affected by the stylesheets. IDs must be unique (IDs in the same HTML file must be different) while classes can be applied to multiple parts of your HTML. The format is '.yourclasshere' and '#youridhere' in regards to setting up your CSS files. 
+              </p>
+              <h3>Images</h3>
+              <p>
+                Images can be included into your web page in a similar manner. As with HTML files/websites, you can include images you have locally, or images already available on the Internet by copying the URL. Instead of 'href', the attribute is called 'src'.
+              </p>
+              <div class="codey">
+                <pre><code class="html">&lt;!--PNGs and GIFs are also allowed--&gt; <br/>&lt;img src=&quot;img/your_image.jpg&quot;&gt;<br/>&lt;!--or--&gt;<br/>&lt;img src=&quot;http://lorempixel.com/400/200/&quot;&gt;</code></pre>
+              </div>
+              <h3>Recap</h3>
+              <p>
+                <ul>
+                  <li>CSS styles your HTML</li>
+                  <li>Classes and IDs declare which elements are styled and how</li>
+                  <li>Classes can be casted on multiples elements in the same HTML file</li>
+                  <li>A particular ID may only be used on one element in an HTML file</li>
+                  <li><strong>href</strong> links CSS and HTML files to your page</li>
+                  <li>href can also jump to an element with a specific ID</li>
+                  <li>You can link both local HTML files and ones already on the internet</li>
+                  <li>Same story for images, except <strong>src</strong> is the attribute, not href</li>
+                </ul>
               </p>
               <nav>
                 <ul class="pager">
                   <li class="previous"><a href="part1.html"><span aria-hidden="true">&larr; Previous</span></a></li>
-                  <li class="next"><a href="part2.html">Next <span aria-hidden="true">&rarr;</span></a></li>
+                  <li class="next"><a href="part3.html">Next <span aria-hidden="true">&rarr;</span></a></li>
                 </ul>
               </nav>
             </div>

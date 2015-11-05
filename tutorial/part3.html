@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <title>Learn Web Design!</title>
+    
+    <!--Favicon-->
+    <link rel="icon" type="../image/png" href="../img/favicon.png">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="../css/tutorial.css">
+
+    <link rel="stylesheet" href="../css/monokai_sublime.css">
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+	</head>
+	<body>
+		<!--Navbar begins-->
+    <div class="navbar navbar-inverse navbar-static-top ">
+      <div class="container">
+        <div class="navbar-header">
+        <a href="../index.html" class="navbar-brand">Learn Web Design!</a>
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button></div>
+        <div class="collapse navbar-collapse navHeaderCollapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorial<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="part1.html">Part 1</a></li>
+                <li><a href="">Part 2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--Navbar ends-->
+
+		<div class="container">
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10">
+          <div class="panel panel-default">
+            <div class="page-header">
+                <center>
+                  <h2>Part 3: Twitter Bootstrap</h2>
+                </center>
+            </div>
+            <div class="panel-body">
+              <h3>File Linking using CDNs (Content Delivery Networks)</h3>
+              <p>
+                Now we're going to include <strong><i>Bootstrap's</i></strong> stylesheets (and JavaScript files)! While we can download them from Bootstrap's website and manually place them in our directories, there's a faster way to include them. CDNs let you pull CSS and JS files using the *Internet*, rather than from your local directory.  
+                <br> <br>
+                Add this CSS href code to the <strong>head</strong> of your HTML:
+                <pre><code class="html"><br>&lt;!-- Latest compiled and minified CSS --&gt;<br/>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css&quot;&gt;
+                </code></pre>
+                And also add this JS-including code to the <strong>end of the body</strong> of your HTML:
+                <pre><code class="html"><br>&lt;!-- JavaScript's jQuery library is also necessary for Bootstrap--&gt;<br/>&lt;script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'&gt;&lt;/script&gt;<br/>&lt;!-- Latest compiled and minified JavaScript for Bootstrap--&gt;<br/>&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+                </code></pre>
+              </p>
+
+              <h3>The Navbar</h3>
+              <p>
+                The Navbar! This code will supply your page with a navigation bar. Add it to the top of your <strong>body.</strong>
+              </p>
+              <pre><code class="html">&lt;!--Navbar begins--&gt;<br/>&lt;div class=&quot;navbar navbar-default navbar-static-top &quot;&gt;<br/>  &lt;div class=&quot;container&quot;&gt;<br/>    &lt;div class=&quot;navbar-header&quot;&gt;<br/>    &lt;a href=&quot;#&quot; class=&quot;navbar-brand&quot;&gt;Website Title&lt;/a&gt;<br/>    &lt;button class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navHeaderCollapse&quot;&gt;<br/>      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;<br/>      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;<br/>      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;<br/>    &lt;/button&gt;&lt;/div&gt;<br/>    &lt;div class=&quot;collapse navbar-collapse navHeaderCollapse&quot;&gt;<br/>      &lt;ul class=&quot;nav navbar-nav navbar-left&quot;&gt;<br/>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li class=&quot;dropdown&quot;&gt;<br/>          &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Dropdown Menu&lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;<br/>          &lt;ul class=&quot;dropdown-menu&quot;&gt;<br/>            &lt;li&gt;&lt;a href=&quot;&quot;&gt;Drop 1&lt;/a&gt;&lt;/li&gt;<br/>            &lt;li&gt;&lt;a href=&quot;&quot;&gt;Drop 2&lt;/a&gt;&lt;/li&gt;<br/>          &lt;/ul&gt;<br/>        &lt;/li&gt;<br/>      &lt;/ul&gt;<br/>    &lt;/div&gt;<br/>  &lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;!--Navbar ends--&gt;</code></pre>
+              <p>You can change the color of the navbar by changing '<strong>navbar-default</strong>' to '<strong>navbar-inverse</strong>'. The navbar can be customized even more, but that is beyond the scope of this tutorial.</p>
+              <h3>Jumbotron</h3>
+              <p>Jumbotrons are useful for landing/home pages.</p>
+              <pre><code class="html">&lt;div class=&quot;jumbotron&quot;&gt;<br/>  &lt;h1&gt;Welcome!&lt;/h1&gt;<br/>  &lt;p&gt;How's it going?&lt;/p&gt;<br/>&lt;/div&gt;</code></pre>
+              <p>Can you figure out how to fix the text alignment?</p>
+              <h3>Buttons</h3>
+              <p>This is the code necessary to add buttons.</p>
+              <pre><code class="html">&lt;a class=&quot;btn btn-primary btn-lg&quot; href=&quot;tutorial/part1.html&quot; role=&quot;button&quot;&gt;View Portfolio&lt;/a&gt;</code></pre>
+              <nav>
+                <ul class="pager">
+                  <li class="previous"><a href="part2.html"><span aria-hidden="true">&larr; Previous</span></a></li>
+                  <li class="next"><a href="part4.html">Next <span aria-hidden="true">&rarr;</span></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+		<!-- jQuery library -->
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		<!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</body>
+</html>
