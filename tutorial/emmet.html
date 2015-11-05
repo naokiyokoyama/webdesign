@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <title>Learn Web Design!</title>
+    
+    <!--Favicon-->
+    <link rel="icon" type="../image/png" href="../img/favicon.png">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="../css/tutorial.css">
+
+    <link rel="stylesheet" href="../css/monokai_sublime.css">
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+	</head>
+	<body>
+		<!--Navbar begins-->
+    <div class="navbar navbar-inverse navbar-static-top ">
+      <div class="container">
+        <div class="navbar-header">
+        <a href="../index.html" class="navbar-brand">Learn Web Design!</a>
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button></div>
+        <div class="collapse navbar-collapse navHeaderCollapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorial<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="part1.html">Part 1</a></li>
+                <li><a href="">Part 2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--Navbar ends-->
+
+		<div class="container">
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10">
+          <div class="panel panel-default">
+            <div class="page-header">
+                <center>
+                  <h2>Installing Emmet</h2>
+                </center>
+            </div>
+            <div class="panel-body">
+              <h3>Install Package Control</h3>
+              <p>
+                Sublime 3:
+              </p>
+              <pre><code class="html">import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)</code></pre>
+              <p>
+                Sublime 2:
+              </p>
+              <pre><code class="html">import urllib2,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')</code></pre>
+              <center><h3>Installation Instructions:</h3></center>
+              <ol>
+                <li>In Sublime Text, go to 'View > Show Console'</li>
+                <li>Paste the above code depending on your version and press Enter</li>
+                <li>Restart Sublime</li>
+                <li>Now go to 'Preferences > Package Control'</li>
+                <li>Select 'Package Control: Install Package'</li>
+                <li>Type 'Emmet'; Select and install it</li>
+                <li>You should see a file open stating that Emmet was successfully installed</li>
+              </ol>
+              <br>
+              <center>
+                <a href="https://www.youtube.com/watch?v=BjLOTepfmEI">Video Link</a>
+              </center>
+              <br><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+		<!-- jQuery library -->
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		<!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</body>
+</html>
